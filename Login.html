@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <meta name="google-signin-client_id" content="679139204576-92doaqm03ubptl267md0o897rh7s9llu.apps.googleusercontent.com">
     <title>ObscurA 4.0|Sign In</title>
 
     <!-- Bootstrap Core CSS -->
@@ -29,6 +29,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
 </head>
 
@@ -75,7 +76,7 @@
 </nav>
 
 <!-- Header -->
-<header style="background-color: black">
+<header >
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -101,7 +102,7 @@
                         <defs>
 
                             <filter id="filter">
-                                <feFlood flood-color="black" result="black" />
+                                <feFlood flood-color="#18BC9C" result="#18BC9C" />
                                 <feFlood flood-color="red" result="flood1" />
                                 <feFlood flood-color="limegreen" result="flood2" />
                                 <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
@@ -176,15 +177,18 @@
                         </defs>
 
                         <g>
-                            <text class="" x="0" y="100">ObscurA 4.0</text>
+                            <text class="" x="0" y="100">ObscurA 4.0  </text>
                         </g>
                     </svg>
 
                     <span class="skills">A online crypo hunt</span><br><br>
                     <form action="">
                         <button id="btnf" type="button"><span id="spn"  class="fa fa-facebook "></span>Login with Facebook</button>
-                        <button id="btng" type="button"><span id="spn"  class="fa fa-google-plus"></span>Login with Google</button>
+                        <!--<button id="btng" class="g-signin2"  data-onsuccess="onSignIn" type="button"><span id="spn"  class="fa fa-google-plus"></span>Login with Google</button> -->
+                        <button id="my-signin2" class="btng" type="button"><span id="spn"  class="fa fa-google-plus "></span>Login with Google</button>
                     </form>
+                    <br>
+                    <br><br>
 
                 </div>
             </div>
@@ -198,52 +202,82 @@
 
 <!-- Contact us-->
 <footer id="contact-us" class="text-center">
-    <div class="footer-above">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col col-md-4">
-                    <h3>Contact Us</h3>
 
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>Around the Web</h3>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col col-md-4">
-
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="footer-below">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     Copyright &copy; ObscurA 4.0
+
                 </div>
             </div>
         </div>
     </div>
 </footer>
-
+<!--GOOGLE API -->
+<script src="https://apis.google.com/js/platform.js"></script>
 <!-- jQuery -->
 <script src="vendor/jquery/jquery.min.js"></script>
+
+<script>
+    var id_token;
+    var BASE = "http://222.222.0.105:3000/users"; // POST REQUEST TO LOGIN/SIGNUP (JSON)
+    function onSuccess(googleUser) {
+
+        id_token = googleUser.getAuthResponse().id_token;
+        $.ajax({
+            url: BASE,
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            data: JSON.stringify({
+                id_token: id_token
+            }),
+            statusCode: {
+                400: function(data) {
+                    // Display form
+                    console.log("400 error", data);
+                },
+                200: function(data) {
+                    // Login successful, redirect to dashboard, save token and user info to localStorage for
+                    // further use
+                    console.log('Request went through', data);
+                }
+            }
+        });
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        // Name, email, phone, course, college
+        // id_token
+    }
+    function onFailure(error) {
+        console.log(error);
+    }
+
+    var startApp = function() {
+        gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+                client_id: '679139204576-92doaqm03ubptl267md0o897rh7s9llu.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin',
+                // Request scopes in addition to 'profile' and 'email'
+                //scope: 'additional_scope'
+            });
+            attachSignin(document.getElementById('my-signin2'));
+        });
+    };
+
+    function attachSignin(element) {
+        console.log(element.id);
+        auth2.attachClickHandler(element, {},
+            onSuccess,
+            onFailure);
+    }
+
+    startApp();
+</script>
+
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
