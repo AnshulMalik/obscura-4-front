@@ -67,7 +67,7 @@
         </entry>
       </file>
       <file leaf-file-name="loginFrom.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/img/loginFrom.html">
+        <entry file="file://$PROJECT_DIR$/loginFrom.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
@@ -145,20 +145,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="obscura-4-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="obscura-4-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -180,6 +166,8 @@
       <recent name="C:\Users\DeMoc\Documents\GitHub\obscura-4-front\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DeMoc\Documents\GitHub\obscura-4-front" />
+      <recent name="C:\Users\DeMoc\Documents\GitHub\obscura-4-front\vendor" />
       <recent name="C:\Users\DeMoc\Documents\GitHub\obscura-4-front\js" />
       <recent name="C:\Users\DeMoc\Documents\GitHub\obscura-4-front\img" />
     </key>
@@ -261,15 +249,15 @@
       <workItem from="1485487015658" duration="2238000" />
       <workItem from="1485517758531" duration="3001000" />
       <workItem from="1485580696680" duration="9828000" />
-      <workItem from="1485760487102" duration="3666000" />
+      <workItem from="1485760487102" duration="3681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18733000" />
+    <option name="totallyTimeSpent" value="18748000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -444,7 +432,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/loginFrom.html">
+    <entry file="file://$PROJECT_DIR$/loginFrom.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
