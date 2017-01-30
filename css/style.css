@@ -43,3 +43,28 @@ svg {
     margin: 20px;
     font-size: large;
  }
+
+#DashImg{
+    width:600px;
+}
+#DashBtn{
+    background-color: #2C3E50;
+    padding:5px 20px 5px 20px;
+
+    color: #fff;
+}
+#DashFrm{
+    color: rgba(0, 0, 0, 0.68);
+}
+#DashTxt{
+    padding:5px;
+}
+#dashboard{
+    padding: -40px 0 -100px 0;
+    margin: -50px 0 -80px 0;
+
+}
+#DashContainer{
+    padding-top: 200px;
+    padding-bottom: 20px;
+}
