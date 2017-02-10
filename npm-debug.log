@@ -1,0 +1,85 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'node',
+1 verbose cli   'server.js' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.0
+4 verbose install initial load of C:\Users\DeMoc\Documents\GitHub\obscura-4-front\package.json
+5 verbose readDependencies loading dependencies from C:\Users\DeMoc\Documents\GitHub\obscura-4-front\package.json
+6 silly cache add args [ 'node', null ]
+7 verbose cache add spec node
+8 silly cache add args [ 'server.js', null ]
+9 verbose cache add spec server.js
+10 silly cache add parsed spec Result {
+10 silly cache add   raw: 'node',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'node',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: 'latest',
+10 silly cache add   type: 'tag' }
+11 silly addNamed node@latest
+12 verbose addNamed "latest" is being treated as a dist-tag for node
+13 info addNameTag [ 'node', 'latest' ]
+14 silly mapToRegistry name node
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry data Result {
+17 silly mapToRegistry   raw: 'node',
+17 silly mapToRegistry   scope: null,
+17 silly mapToRegistry   name: 'node',
+17 silly mapToRegistry   rawSpec: '',
+17 silly mapToRegistry   spec: 'latest',
+17 silly mapToRegistry   type: 'tag' }
+18 silly mapToRegistry uri https://registry.npmjs.org/node
+19 verbose addNameTag registry:https://registry.npmjs.org/node not in flight; fetching
+20 silly cache add parsed spec Result {
+20 silly cache add   raw: 'server.js',
+20 silly cache add   scope: null,
+20 silly cache add   name: 'server.js',
+20 silly cache add   rawSpec: '',
+20 silly cache add   spec: 'latest',
+20 silly cache add   type: 'tag' }
+21 silly addNamed server.js@latest
+22 verbose addNamed "latest" is being treated as a dist-tag for server.js
+23 info addNameTag [ 'server.js', 'latest' ]
+24 silly mapToRegistry name server.js
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry data Result {
+27 silly mapToRegistry   raw: 'server.js',
+27 silly mapToRegistry   scope: null,
+27 silly mapToRegistry   name: 'server.js',
+27 silly mapToRegistry   rawSpec: '',
+27 silly mapToRegistry   spec: 'latest',
+27 silly mapToRegistry   type: 'tag' }
+28 silly mapToRegistry uri https://registry.npmjs.org/server.js
+29 verbose addNameTag registry:https://registry.npmjs.org/server.js not in flight; fetching
+30 verbose get https://registry.npmjs.org/node not expired, no request
+31 silly addNameTag next cb for node with tag latest
+32 silly addNamed node@0.0.0
+33 verbose addNamed "0.0.0" is a plain semver version for node
+34 warn deprecated node@0.0.0: To update or install node, go to http://nodejs.org/
+35 verbose get https://registry.npmjs.org/server.js not expired, no request
+36 silly addNameTag next cb for server.js with tag latest
+37 verbose stack TypeError: Cannot convert undefined or null to object
+37 verbose stack     at Function.keys (native)
+37 verbose stack     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:273:24)
+37 verbose stack     at next (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:94:10)
+37 verbose stack     at RES (C:\Program Files\nodejs\node_modules\npm\node_modules\inflight\inflight.js:23:14)
+37 verbose stack     at f (C:\Program Files\nodejs\node_modules\npm\node_modules\once\once.js:17:25)
+37 verbose stack     at fixName (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:29:5)
+37 verbose stack     at CachingRegistryClient.get_ (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:125:16)
+37 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:91:14
+37 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:78:16
+37 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+38 verbose cwd C:\Users\DeMoc\Documents\GitHub\obscura-4-front
+39 error Windows_NT 6.3.9600
+40 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "node" "server.js"
+41 error node v4.6.0
+42 error npm  v2.15.9
+43 error Cannot convert undefined or null to object
+44 error If you need help, you may report this error at:
+44 error     <https://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]
